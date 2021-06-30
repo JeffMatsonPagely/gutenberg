@@ -186,7 +186,7 @@ export default function useSelect( mapSelect, deps ) {
 			latestIsAsync.current = isAsync;
 			renderQueue.flush( queueContext );
 		}
-	} );
+	}, [ mapOutput ] );
 
 	useIsomorphicLayoutEffect( () => {
 		if ( ! hasMappingFunction ) {
